@@ -21,13 +21,16 @@ cp -Rf /tmp/src/. $SOURCE
 cd $SOURCE
 
 echo "---> Downloading dependencies..."
-glide up -v ./...
+go get -v ./...
 
-echo "---> Building application source..."
-go build -v -o main
-go install main
+echo "---> Installing revel..."
+go get github.com/golang/dep/cmd/dep
+go get github.com/revel/revel
+go get github.com/revel/cmd/revel
 
-echo
+echo "---> Building application source with revel..."
+$GOBIN/revel build main/ $GOBIN/build
+
 echo "===> Build completed at $(date)"
 
 # Fix source directory permissions
