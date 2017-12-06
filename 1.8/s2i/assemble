@@ -29,7 +29,7 @@ go get github.com/revel/revel
 go get github.com/revel/cmd/revel
 
 echo "---> Building application source with revel..."
-$GOBIN/revel build main/ $GOBIN/build
+$GOBIN/revel build main/ $GOBIN/build prod
 
 echo "===> Build completed at $(date)"
 
