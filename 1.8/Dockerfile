@@ -6,7 +6,7 @@ MAINTAINER SoftwareCollections.org <sclorg@redhat.com>
 
 EXPOSE 8080
 
-ENV GO_MINOR_VERSION=8 \
+ENV GO_MINOR_VERSION=9 \
     GO_PATCH_VERSION=0 \
     GLIDE_VERSION=0.12.3
 
